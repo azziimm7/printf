@@ -2,7 +2,7 @@
 /**
  * my_putchr - print a charcter
  * @c : char input
- * return: 1
+ * Return: 1
  */
 int my_putchr(char c)
 {

@@ -3,7 +3,7 @@
  * putss - print a string
  *
  * @c: string
- * return: no of bytes
+ * Return: no of bytes
  */
 int putss(char *c)
 {
