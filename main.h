@@ -22,4 +22,9 @@ int _printf(const char *format, ...);
 int _puts(char *str);
 int _putchar(int c);
 
+/* number.c module */
+char *convert(long int num, int base, int flag, params_t *params);
+int print_unsigned(va_list ap, params_t *params);
+int print_address(va_list ap, params_t *params);
+
 #endif
