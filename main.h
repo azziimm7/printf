@@ -4,9 +4,22 @@
 #include <stdarg.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <limits.h>
+#include <stdio.h>
 
-int my_putchr(char c);
+#define OUTPUT_BUF_SIZE 1024
+#define BUF_FLUSH -1
+
+/* print functions.c module */
+int print_char(va_list ap, params_t *params);
+int print_string(va_list ap, params_t *params);
+int print_percent(va_list ap, params_t *params);  
+
+/* printf.c module */
 int _printf(const char *format, ...);
-int putss(char *c);
+
+/* _puts.c module */
+int _puts(char *str);
+int _putchar(int c);
 
 #endif
