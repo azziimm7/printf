@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- * * _printf - print to stdout formatted text 
+ * * _printf - print to stdout formatted text
  *
  *  @format : format specifier
- *  return: no of bytes printed
+ *  Return: no of bytes printed
  */
 int _printf(const char *format, ...)
 {
@@ -28,7 +28,6 @@ int _printf(const char *format, ...)
 		{
 			my_putchr(va_arg(args, int));
 			i++;
-			 
 		}
 		else if (format[i + 1] == 's')
 		{
@@ -43,7 +42,7 @@ int _printf(const char *format, ...)
 		count += 1;
 
 	}
-	
+
 	va_end(args);
 	return (count);
 }
