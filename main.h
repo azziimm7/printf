@@ -1,11 +1,18 @@
-#ifndef _MAIN_H_
-#define _MAIN_H_
+#ifndef MAIN_H
+
+#define MAIN_H
 
 #include <stdarg.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <limits.h>
+
 #include <stdio.h>
+
+#include <unistd.h>
+
+#include <limits.h>
+
+#define UNUSED(x) (void)(x)
+
+
 
 #define OUTPUT_BUF_SIZE 1024
 #define BUF_FLUSH -1
@@ -14,8 +21,8 @@
 
 #define PARAMS_INIT {0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 
-#define CONVERT_LOWERCASE  1
-#define CONVERT_UNSIGNED   2
+#define CONVERT_LOWERCASE    1
+#define CONVERT_UNSIGNED     2
 
 /**
  * struct parameters - parameters struct
@@ -71,8 +78,6 @@ int print_percent(va_list ap, params_t *params);
 int print_int(va_list ap, params_t *params);
 int print_S(va_list ap, params_t *params);
 
-/* printf.c module */
-int _printf(const char *format, ...);
 
 /* _puts.c module */
 int _puts(char *str);
@@ -100,7 +105,7 @@ int get_modifier(char *s, params_t *params);
 char *get_width(char *s, params_t *params, va_list ap);
 
 /* string_fields.c module */
-char *get_percision(char *p, params_t *params, va_list ap);
+char *get_precision(char *p, params_t *params, va_list ap);
 
 /* simple_printers.c module */
 int print_from_to(char *start, char *stop, char *except);
@@ -114,4 +119,6 @@ int print_number(char *str, params_t *params);
 int print_number_right_shift(char *str, params_t *params);
 int print_number_left_shift(char *str, params_t *params);
 
+/* printf.c module */
+int _printf(const char *format, ...);
 #endif

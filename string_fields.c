@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * get_percision - gets percesion from format string
+ * get_precision - gets percesion from format string
  * @p: format string
  * @params: the paramteres sturct
  * @ap: the arg pointer
  *
  * Return: new pointer
  */
-char *get_percision(char *p, params_t *params, va_list ap)
+char *get_precision(char *p, params_t *params, va_list ap)
 {
 	int d = 0;
 
