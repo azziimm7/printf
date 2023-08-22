@@ -1,18 +1,15 @@
 #include "main.h"
 
 /**
- * get specifier - finds the format func
+ * get_specifier - finds the format func
  * @s: the format string
  *
  * Return: the number of bytes printed
  */
 int(*get_specifier(char *s))(va_list ap, params_t *params)
 {
-<<<<<<< HEAD
-	specifier_t sepcifier[] = {
-=======
 	specifier_t specifiers[] = {
->>>>>>> 1a427b1c56ed7322a3ae43da9cfe56dada80d10a
+
 		{"c", print_char},
 		{"d", print_int},
 		{"i", print_int},
@@ -140,4 +137,3 @@ char *get_width(char *s, params_t *params, va_list ap)
 	params->width = d;
 	return (s);
 }
-
