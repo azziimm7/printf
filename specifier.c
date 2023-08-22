@@ -8,13 +8,13 @@
  */
 int(*get_specifier(char *s))(va_list ap, params_t *params)
 {
-	specifier_t sepcifier[] = {
+	specifier_t sepcifier[] ={
 		{"c", print_char},
 		{"d", print_int},
 		{"i", print_int},
 		{"s", print_string},
 		{"%", print_percent},
-		{"b", print_binary},
+		{"b", print_binary}
 		{"o", print_octal},
 		{"u", print_unsigned},
 		{"x", print_hex},
@@ -24,7 +24,7 @@ int(*get_specifier(char *s))(va_list ap, params_t *params)
 		{"r", print_rev},
 		{"R", print_rot13},
 		{NULL, NULL}
-		};
+				};
 	int i = 0;
 
 	while (specifiers[i].specifier)
@@ -94,6 +94,7 @@ int get_flag(char *s, params_t *params)
  * returns: if modifier valid
  */
 int get_modifier(char *s, params_t *params)
+
 {
 	int i = 0;
 
@@ -117,7 +118,8 @@ int get_modifier(char *s, params_t *params)
  *
  * return: new pointer
  */
-char *get_width(char *s, params_t, va_list ap)
+char *get_width(char *s, params_t *params, va_list ap)
+
 {
 	int d = 0;
 
@@ -134,3 +136,4 @@ char *get_width(char *s, params_t, va_list ap)
 	params->width = d;
 	return (s);
 }
+
