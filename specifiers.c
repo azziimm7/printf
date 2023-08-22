@@ -45,7 +45,7 @@ int(*get_specifier(char * 5))(va_list ap, params_t *params)
  * @params: the parameters struct
  * Return: the number of bytes printed
  */
-int get_print_func(char *s, va list ap, params_t *params)
+int get_print_func(char *s, va_list ap, params_t *params)
 {
 	int (*f)(va_list, params_t *) = get_specifier(s);
 
@@ -117,7 +117,7 @@ int get_modifier(char *s, params_t *params)
  *
  * return: new pointer
  */
-char *get_width(char *s, params, va_list ap)
+char *get_width(char *s, params_t, va_list ap)
 {
 	int d = 0;
 
