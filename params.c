@@ -18,6 +18,6 @@ void init_params(params_t *params, va_list ap)
 	params->minus_flag = 0;
 
 	params->width = 0;
-	params->percision = UNIT_MAX;
+	params->precision = UINT_MAX;
 	(void)ap;
 }
