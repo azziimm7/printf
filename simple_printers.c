@@ -2,7 +2,7 @@
 
 /**
  * print from to - prints a range of char addresses
- *start: starting address
+ *@start: starting address
  *@stop: stopping address dexcept: except address
  *@except: except address
  *
