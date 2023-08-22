@@ -26,7 +26,7 @@ int print_from_to(char *start, char *stop, char *except)
  *@ap: string
  *@params: the parameters struct
  *
- *Returns: nugber bytes printed
+ *Return: nugber bytes printed
  */
 int print_rev(va_list ap, params_t *params)
 {
