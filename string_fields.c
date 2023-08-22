@@ -25,6 +25,6 @@ char *get_percision(char *p, params_t *params, va_list ap)
 		while (_isdigit(*p))
 			d = d * 10 + (*p++ - '0');
 	}
-	params->percision = d;
+	params->precision = d;
 	return (p);
 }

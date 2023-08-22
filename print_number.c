@@ -38,14 +38,14 @@ int print_number(char *str, params_t *params)
 	unsigned int i = _strlen(str);
 	int neg = (!params->unsign && *str == '-');
 
-	if (!params->percision && *str == '0' && !str[1])
+	if (!params->precision && *str == '0' && !str[1])
 		str = "";
 	if (neg)
 	{
 		str++;
 		i--;
 	}
-	if (!params->unsign != UNIT_MAX)
+	if (params->unsign != UINT_MAX)
 		while (i++ < !params->unsign)
 			*--str = '0';
 	if (neg)
@@ -118,11 +118,9 @@ int print_number_left_shift(char *str, params_t *params)
 		neg = 0;
 
 	if (params->plus_flag && !neg2 && !params->unsign)
-		n += _putchar('+');
-		i++;
+		n += _putchar('+'), i++;
 	else if (params->space_flag && !neg2 && !params->unsign)
-		n += _putchar(' ');
-		i++;
+		n += _putchar(' '), i++;
 	n += _puts(str);
 	while (i++ < params->width)
 		n += _putchar(pad_char);

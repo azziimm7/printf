@@ -92,13 +92,18 @@ int print_octal(va_list ap, params_t *params);
 /* params.c module */
 void init_params(params_t *params, va_list ap);
 
+<<<<<<< HEAD
 /* specifier.c module */
 <<<<<<< HEAD
+=======
+/* specifiers.c module */
+>>>>>>> afc75fe3b65bb1ccbacb16d77f6cb0f1c5e6b17b
 int (*get_specifier(char * s))(va_list ap, params_t *params);
 int get_print_func(char *s, va_list ap, params_t *params);
 int get_flag(char *s, params_t *params);
 int get_modifier(char *s, params_t *params);
 char *get_width(char *s, params_t *params, va_list ap);
+<<<<<<< HEAD
 =======
 int (*get_specifier(char *s))(va_list ap, params_t *params)
 int get_print_func(char *s, va list ap, params_t *params)
@@ -106,6 +111,8 @@ int get_flag(char *s, params_t *params)
 int get_modifier(char *s, params_t *params)
 char *get_width(char *s, params, va_list ap)
 >>>>>>> 1f776eb7ee4373e5e3b9e01083e675a254c05c8a
+=======
+>>>>>>> afc75fe3b65bb1ccbacb16d77f6cb0f1c5e6b17b
 
 /* string_fields.c module */
 char *get_percision(char *p, params_t *params, va_list ap);
