@@ -73,7 +73,8 @@ int print_number_right_shift(char *str, params_t *params)
 	neg = neg2 = (!params->unsign && *str == '-');
 	if (neg && i < params->width && pad_char == '0' && !params->minus_flag)
 		str++;
-	else neg = 0;
+	else
+		neg = 0;
 	if ((params->plus_flag && !neg2) ||
 		(!params->plus_flag && params->space_flag && !neg2))
 		i++;
