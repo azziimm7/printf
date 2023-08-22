@@ -3,7 +3,7 @@
 /**
  * init_params - clears struct fields and reset buf
  * @params: the parameters struct
- * @ap: arg pointer
+ * @ap: argument pointer
  *
  * Return: void
  */
