@@ -8,13 +8,17 @@
  */
 int(*get_specifier(char *s))(va_list ap, params_t *params)
 {
+<<<<<<< HEAD
 	specifier_t sepcifier[] = {
+=======
+	specifier_t specifiers[] = {
+>>>>>>> 1a427b1c56ed7322a3ae43da9cfe56dada80d10a
 		{"c", print_char},
 		{"d", print_int},
 		{"i", print_int},
 		{"s", print_string},
 		{"%", print_percent},
-		{"b", print_binary}
+		{"b", print_binary},
 		{"o", print_octal},
 		{"u", print_unsigned},
 		{"x", print_hex},
@@ -24,7 +28,7 @@ int(*get_specifier(char *s))(va_list ap, params_t *params)
 		{"r", print_rev},
 		{"R", print_rot13},
 		{NULL, NULL}
-				};
+	};
 	int i = 0;
 
 	while (specifiers[i].specifier)

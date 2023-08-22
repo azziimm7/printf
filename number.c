@@ -4,7 +4,7 @@
   * convert - converter function, a clone of itoa
   * @num: number
   * @base: base
-  * @flag: argument flags
+  * @flags: argument flags
   * @params: parameter structure
   *
   * Return: parametere string
