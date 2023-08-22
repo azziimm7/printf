@@ -6,7 +6,7 @@
  *
  * Return: the number of bytes printed
  */
-int(*get_specifier(char * 5))(va_list ap, params_t *params)
+int(*get_specifier(char *s))(va_list ap, params_t *params)
 {
 	specifier_t sepcifier[] = {
 		{"c", print_char},
@@ -24,16 +24,16 @@ int(*get_specifier(char * 5))(va_list ap, params_t *params)
 		{"r", print_rev},
 		{"R", print_rot13},
 		{NULL, NULL}
-	};
+		};
 	int i = 0;
 
 	while (specifiers[i].specifier)
 	{
 		if (*s == specifiers[i].specifier[0])
 		{
-			return (specifiers[i].f);
+		return (specifiers[i].f);
 		}
-		i++;
+	i++;
 	}
 	return (NULL);
 }
@@ -131,6 +131,6 @@ char *get_width(char *s, params, va_list ap)
 		while (_isdigit(*s))
 			d = d * 10 + (*s++ - '0');
 	}
-	params->width =	d;
+	params->width = d;
 	return (s);
 }

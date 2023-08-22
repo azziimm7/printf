@@ -93,7 +93,7 @@ int print_octal(va_list ap, params_t *params);
 void init_params(params_t *params, va_list ap)
 
 /* specifiers.c module */
-int (*get_specifier(char * 5))(va_list ap, params_t *params)
+int (*get_specifier(char *s))(va_list ap, params_t *params)
 int get_print_func(char *s, va list ap, params_t *params)
 int get_flag(char *s, params_t *params)
 int get_modifier(char *s, params_t *params)
