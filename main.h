@@ -43,7 +43,7 @@ typedef struct parameters
 	unsigned int hashtag_flag     : 1;
 	unsigned int zero_flag        : 1;
 	unsigned int minus_flag       : 1;
-	
+
 	unsigned int width;
 	unsigned int precision;
 
@@ -67,7 +67,9 @@ typedef struct specifier
 /* print functions.c module */
 int print_char(va_list ap, params_t *params);
 int print_string(va_list ap, params_t *params);
-int print_percent(va_list ap, params_t *params);  
+int print_percent(va_list ap, params_t *params);
+int print_int(va_list ap, params_t *params);
+int print_S(va_list ap, params_t *params);
 
 /* printf.c module */
 int _printf(const char *format, ...);
@@ -82,9 +84,9 @@ int print_unsigned(va_list ap, params_t *params);
 int print_address(va_list ap, params_t *params);
 
 /* convert number module */
-print_hex(va_list ap, params_t *params);
-print_HEX(va_list ap, params_t *params);
-print_binary(va_list ap, params_t *params);
-print_octal(va_list ap, params_t *params);
+int print_hex(va_list ap, params_t *params);
+int print_HEX(va_list ap, params_t *params);
+int print_binary(va_list ap, params_t *params);
+int print_octal(va_list ap, params_t *params);
 
 #endif

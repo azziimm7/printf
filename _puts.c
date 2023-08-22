@@ -3,7 +3,7 @@
  * _puts - prints a atring w new line
  * @str: the string to print
  *
- * Return void
+ * Return: void
  */
 int _puts(char *str)
 {
@@ -36,5 +36,5 @@ int _putchar(int c)
 	{
 		buf[i++] = c;
 	}
-	return(1);
+	return (1);
 }
